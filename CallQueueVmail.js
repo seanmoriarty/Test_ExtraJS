@@ -1,4 +1,4 @@
 $(function () {
-  $('#CallqueueVmailProvisioned').val() == "no"
+  $('#CallqueueVmailProvisioned').val() = "no"
 });
 
