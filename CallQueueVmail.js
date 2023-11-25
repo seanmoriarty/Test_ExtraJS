@@ -1,6 +1,5 @@
-$('#CallqueueVmailProvisioned').val( '');
 $(function () {
-  $('#CallqueueVmailProvisioned').val() = 'no';
-  console.log($('#CallqueueVmailProvisioned').val());
+  var e = document.getElementById("CallqueueVmailProvisioned");
+  console.log(e);
 });
 
