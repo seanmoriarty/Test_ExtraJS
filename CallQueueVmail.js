@@ -1,5 +1,2 @@
-$(function () {
-  $('#CallqueueVmailProvisioned').val() = "no";
-  console.log(#CallqueueVmailProvisioned.val())
-});
+$('#CallqueueVmailProvisioned').val( 'no');
 
