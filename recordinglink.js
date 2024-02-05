@@ -1,4 +1,4 @@
-document.addEventListener.("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   // Select the table by its ID
   var table = document.getElementById("call-history-table");
 
