@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+nddocument.addEventListener("DOMContentLoaded", function() {
   // Select the table by its ID
   var table = document.getElementById("call-history-table");
 
@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function getLink (){
-  var a_href = jQuery('td.action-buttons:first a').attr('href');
+  var a_href = jQuery('td.action-buttons:second a').attr('href');
   alert(a_href);
 }
 
 function copyToClipboard(btnElement) {
   // Get the link in the same row as the button
   //var link = btnElement.closest("td.action-buttons:first a").querySelector("a").href;
-  var link = jQuery('td.action-buttons:first a').attr('href');
+  var link = jQuery('td.action-buttons:second a').attr('href');
 
   // Copy the link to the clipboard
   navigator.clipboard.writeText(link).then(function() {
