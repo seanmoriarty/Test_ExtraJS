@@ -12,14 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // Insert the button into the last cell of the row
-    var cell = row.insertCell(-1);
-    cell.appendChild(button);
+    //var cell = row.insertCell(-1);
+    td.appendChild(button);
   });
 });
 
 function copyToClipboard(btnElement) {
   // Get the link in the same row as the button
-  var link = btnElement.closest("tr").querySelector("a").href;
+  var link = btnElement.closest("td").querySelector("a").href;
 
   // Copy the link to the clipboard
   navigator.clipboard.writeText(link).then(function() {
