@@ -28,7 +28,9 @@ function copyToClipboard(btnElement) {
   // Copy the link to the clipboard
   navigator.clipboard.writeText(link).then(function() {
     console.log('Link copied to clipboard!');
+    alert("Link Copied");
   }).catch(function(error) {
     console.error('Error copying link: ', error);
+    alert("Error Copying");
   });
 }
