@@ -25,7 +25,7 @@ function getLink (){
 
 function copyToClipboard(btnElement) {
   // Get the link in the same row as the button
-  var link = btnElement.closest("td").querySelector("a").href;
+  var link = btnElement.closest("td.action-buttons:first a").querySelector("a").href;
 
   // Copy the link to the clipboard
   navigator.clipboard.writeText(link).then(function() {
