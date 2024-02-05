@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // Create a new button element
     var button = document.createElement("button");
     button.textContent = "Copy";
-    button.setAttribute('class', 'download-audio.helpsy');
+    button.setAttribute('tag', 'download-audio.helpsy');
     button.onclick = function() {
       copyToClipboard(this);
     };
