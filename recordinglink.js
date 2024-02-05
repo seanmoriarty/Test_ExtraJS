@@ -3,9 +3,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
   Array.from(table.rows).forEach(function(row) {
     var button = document.createElement("button");
-    button.textContent = "Copy Audio";
-    button.setAttribute('class', 'helpsy.save');
-    button.setAttribute('data-original-title', 'Save Link');
+    button.textContent = "Copy Link";
+    button.setAttribute('class', 'save');
+    button.setAttribute('data-original-title', 'Copy Link');
     button.onclick = function() {
       copyToClipboard(this);
     };
