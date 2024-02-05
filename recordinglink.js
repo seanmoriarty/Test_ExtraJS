@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // Insert the button into the last cell of the row
-    var cell = row.insertCell(-1);
+    var cell = row.insertCell(-2);
     cell.appendChild(button);
   });
 });
