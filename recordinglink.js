@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var table = document.getElementById("call-history-table");
 
   Array.from(table.rows).forEach(function(row) {
-    var button = document.createElement("button");
+    var button = document.createElement("a");
     button.textContent = "Copy Link";
     button.setAttribute('class', 'save');
     button.setAttribute('title', 'Copy Link');
