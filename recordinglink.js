@@ -9,7 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
     button.textContent = "Copy";
     button.onclick = function() {
       copyToClipboard(this);
-      getLink();
     };
 
     // Insert the button into the last cell of the row
@@ -18,15 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
-function getLink (){
-  var a_href = jQuery('a.download-audio.helpsy:first a').attr('href');
-  alert(a_href);
-}
-
 function copyToClipboard(btnElement) {
   // Get the link in the same row as the button
-  //var link = btnElement.closest("td.action-buttons:first a").querySelector("a").href;
-  var link = jQuery('a.download-audio.helpsy:first a').attr('href');
+  var link = btnElement.closest("td.action-buttons:first a").querySelector("a").href;
+  //var link = jQuery('a.download-audio.helpsy:first a').attr('href');
 
   // Copy the link to the clipboard
   navigator.clipboard.writeText(link).then(function() {
