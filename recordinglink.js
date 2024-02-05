@@ -19,8 +19,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function copyToClipboard(btnElement) {
   // Get the link in the same row as the button
-  //var link = btnElement.closest("td.action-buttons:first a").querySelector("a").href;
-  var link = jQuery('a.download-audio.helpsy:first a').attr('href');
+  var link = btnElement.closest("td.action-buttons:a.download-audio.helpsy").querySelector("a").href;
+  //var link = jQuery('a.download-audio.helpsy:first a').attr('href');
 
   // Copy the link to the clipboard
   navigator.clipboard.writeText(link).then(function() {
