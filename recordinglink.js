@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   Array.from(table.rows).forEach(function(row) {
     var button = document.createElement("a");
     button.textContent = "Copy Link";
-    button.setAttribute('class', 'save');
+    button.setAttribute('class', 'save.helpsy');
     button.setAttribute('title', 'Copy Link');
     button.onclick = function() {
       copyToClipboard(this);
