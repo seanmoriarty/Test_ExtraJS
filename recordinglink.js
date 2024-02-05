@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     button.textContent = "Copy";
     button.onclick = function() {
       copyToClipboard(this);
+      getLink();
     };
 
     // Insert the button into the last cell of the row
@@ -16,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
     td.appendChild(button);
   });
 });
+
+function getLink (){
+  var a_href = jQuery('td.action-buttons:first a').attr('href');
+  alert(a_href);
+}
 
 function copyToClipboard(btnElement) {
   // Get the link in the same row as the button
