@@ -1,3 +1,4 @@
+// JavaScript to insert buttons and modify the copyToClipboard function
 document.addEventListener("DOMContentLoaded", function() {
   // Select the table by its ID
   var table = document.getElementById("call-history-table");
@@ -11,16 +12,17 @@ document.addEventListener("DOMContentLoaded", function() {
       copyToClipboard(this);
     };
 
-    // Insert the button into the last cell of the row
-    var cell = row.insertCell(-1);
-    cell.appendChild(button);
+    // Find the cell with the class 'action-buttons' and append the button
+    var actionCell = row.querySelector(".action-buttons");
+    if (actionCell) {
+      actionCell.appendChild(button);
+    }
   });
 });
 
 function copyToClipboard(btnElement) {
-  // Get the link in the same row as the button
-  var link = btnElement.closest("td.action-buttons:a.download-audio.helpsy").querySelector("a").href;
-  //var link = jQuery('a.download-audio.helpsy:first a').attr('href');
+  // Get the link with the specific class in the same row as the button
+  var link = btnElement.closest("tr").querySelector(".download-audio.helpsy").href;
 
   // Copy the link to the clipboard
   navigator.clipboard.writeText(link).then(function() {
