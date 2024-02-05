@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
     button.textContent = "Copy Link";
     button.setAttribute('class', 'save.helpsy');
     button.setAttribute('title', 'Copy Link');
+    button.setAttribute('data-original-title', 'Copy Link');
     button.onclick = function() {
       copyToClipboard(this);
     };
