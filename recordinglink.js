@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
   Array.from(table.rows).forEach(function(row) {
     // Create a new button element
     var button = document.createElement("button");
-    button.textContent = "Copy";
+    button.textContent = "Copy Audio";
     button.setAttribute('class', 'save');
     button.onclick = function() {
       copyToClipboard(this);
