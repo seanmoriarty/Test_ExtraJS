@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var button = document.createElement("button");
     button.textContent = "Copy Audio";
     button.setAttribute('class', 'save');
+    button.setAttribute('data-original-title', 'Save Link');
     button.onclick = function() {
       copyToClipboard(this);
     };
