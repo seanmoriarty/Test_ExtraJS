@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   // Select the table by its ID
-  var table = document.getElementById("call-hitory-table");
+  var table = document.getElementById("call-history-table");
 
   // Iterate over each row in the table
   Array.from(table.rows).forEach(function(row) {
