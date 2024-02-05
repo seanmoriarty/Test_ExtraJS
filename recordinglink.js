@@ -13,8 +13,8 @@ document.addEventListener("DOMContentLoaded", function() {
     };
 
     // Insert the button into the last cell of the row
-    //var cell = row.insertCell(-1);
-    td.appendChild(button);
+    var cell = row.insertCell(-1);
+    cell.appendChild(button);
   });
 });
 
