@@ -19,7 +19,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function copyToClipboard(btnElement) {
   var link = btnElement.closest("tr").querySelector(".download-audio.helpsy").href;
-  
+  if (link === null || link === ""){
+    console.log("link empty");
+  }
   navigator.clipboard.writeText(link).then(function() {
     console.log('Link copied to clipboard!');
     alert("Copied Link: " + link);
