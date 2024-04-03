@@ -24,10 +24,11 @@ function copyToClipboard(btnElement) {
     navigator.clipboard.writeText(link).then(function() {
       console.log('Link copied to clipboard!');
       alert("Copied Link: " + link);
-    }
-
-  }).catch(function(error) {
-    console.error('Error copying link: ', error);
-    alert("Error Copying");
-  });
+  
+    }).catch(function(error) {
+      console.error('Error copying link: ', error);
+      alert("Error Copying");
+    });
+  }
+  else alert("Link not available");
 }
