@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   Array.from(table.rows).forEach(function(row) {
     var audioLinkElement = row.querySelector(".download-audio.helpsy");
     var audioLink = audioLinkElement ? audioLinkElement.href : 'No Link';
+    console.log("Link Element: "+ audioLinkElement);
     
     var button = document.createElement("a");
     button.textContent = "Copy Link: " + audioLink;
