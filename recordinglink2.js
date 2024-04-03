@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var table = document.getElementById("call-history-table");
 
   Array.from(table.rows).forEach(function(row) {
-    var audioLinkElement = row.querySelector("td .download-audio.helpsy");
+    var audioLinkElement = row.querySelector(".action-buttons .download-audio.helpsy");
     var audioLink = audioLinkElement ? audioLinkElement.href : 'No Link';
     console.log("Link Element: "+ audioLinkElement);
     
