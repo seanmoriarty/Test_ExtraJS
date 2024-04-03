@@ -22,12 +22,14 @@ function copyToClipboard(btnElement) {
   if (link === null || link === ""){
     console.log("link empty");
   }
-  navigator.clipboard.writeText(link).then(function() {
-    console.log('Link copied to clipboard!');
-    alert("Copied Link: " + link);
+  else {
+    navigator.clipboard.writeText(link).then(function() {
+      console.log('Link copied to clipboard!');
+      alert("Copied Link: " + link);
      
-  }).catch(function(error) {
-    console.error('Error copying link: ', error);
-    alert("Error Copying");
-  });
+    }).catch(function(error) {
+      console.error('Error copying link: ', error);
+      alert("Error Copying");
+    });
+  }
 }
