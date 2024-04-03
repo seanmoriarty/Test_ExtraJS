@@ -20,15 +20,12 @@ document.addEventListener("DOMContentLoaded", function() {
 function copyToClipboard(btnElement) {
   var link = btnElement.closest("tr").querySelector(".download-audio.helpsy").href;
   
-  if (link !== null){
-    navigator.clipboard.writeText(link).then(function() {
-      console.log('Link copied to clipboard!');
-      alert("Copied Link: " + link);
+  navigator.clipboard.writeText(link).then(function() {
+    console.log('Link copied to clipboard!');
+    alert("Copied Link: " + link);
   
-    }).catch(function(error) {
-      console.error('Error copying link: ', error);
-      alert("Error Copying");
-    });
-  }
-  else alert("Link not available");
+  }).catch(function(error) {
+    console.error('Error copying link: ', error);
+    alert("Error Copying");
+  });
 }
