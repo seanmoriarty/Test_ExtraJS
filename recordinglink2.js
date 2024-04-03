@@ -21,7 +21,7 @@ function copyToClipboard(btnElement) {
   var link = btnElement.closest("tr").querySelector(".download-audio.helpsy").href;
   if (link === null || link === ""){
     console.log("Link Empty");
-    alert("Link not available.\n Refresh and try again.");
+    alert("Link not available.\nRefresh and try again.");
   }
   else {
     navigator.clipboard.writeText(link).then(function() {
