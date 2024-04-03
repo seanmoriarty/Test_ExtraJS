@@ -2,23 +2,18 @@ document.addEventListener("DOMContentLoaded", function() {
   var table = document.getElementById("call-history-table");
 
   Array.from(table.rows).forEach(function(row) {
-    var firstLinkElement = row.querySelector(".action-buttons a");
-    var firstLink = firstLinkElement ? firstLinkElement.href : 'No Link';
-    console.log("Link: "+ firstLinkElement);
-    
     var button = document.createElement("a");
-    button.textContent = "Copy Link: " + firstLink;
+    button.textContent = "Copy Link";
     button.setAttribute('class', 'save');
-    button.setAttribute('title', 'Copy Link: ' + firstLink);
+    button.setAttribute('title', 'Copy Link');
     button.onclick = function() {
       copyToClipboard(this);
     };
-    waitForElement(".action-buttons a", function() {
-      var actionCell = row.querySelector(".action-buttons");
-      if (actionCell) {
-        actionCell.appendChild(button);
-      }
-  });
+
+    var actionCell = row.querySelector(".action-buttons");
+    if (actionCell) {
+      actionCell.appendChild(button);
+    }
   });
 });
 
@@ -37,15 +32,5 @@ function copyToClipboard(btnElement) {
       console.error('Error copying link: ', error);
       alert("Error Copying");
     });
-  }
-}
-
-function waitForElement(selector, callback) {
-  if (document.querySelector(selector)) {
-    callback();
-  } else {
-    setTimeout(function() {
-      waitForElement(selector, callback);
-    }, 100); // Check every 100ms
   }
 }
