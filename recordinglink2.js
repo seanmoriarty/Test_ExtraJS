@@ -74,7 +74,7 @@ function copyToClipboard(btnElement) {
 
   navigator.clipboard.writeText(link).then(function() {
     console.log('Link copied to clipboard!');
-    alert(link + "Copied!");
+    alert(link + "\n Copied!");
     new Toast(link + "Copied!",ToastType.Succes,5000);
   }).catch(function(error) {
     console.error('Error copying link: ', error);
