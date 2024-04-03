@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   Array.from(table.rows).forEach(function(row) {
     var button = document.createElement("a");
-    button.textContent = "Copy Link";
+    button.textContent = "Copy Link" + row.querySelector(".download-audio.helpsy").href;
     button.setAttribute('class', 'save');
     button.setAttribute('title', 'Copy Link');
     button.onclick = function() {
