@@ -2,14 +2,14 @@ document.addEventListener("DOMContentLoaded", function() {
   var table = document.getElementById("call-history-table");
 
   Array.from(table.rows).forEach(function(row) {
-    var audioLinkElement = row.querySelector(".action-buttons .download-audio.helpsy");
-    var audioLink = audioLinkElement ? audioLinkElement.href : 'No Link';
-    console.log("Link Element: "+ audioLinkElement);
+    var firstLinkElement = row.querySelector(".action-buttons a");
+    var firstLink = firstLinkElement ? firstLinkElement.href : 'No Link';
+    console.log("Link: "+ firstLink);
     
     var button = document.createElement("a");
-    button.textContent = "Copy Link: " + audioLink;
+    button.textContent = "Copy Link: " + firstLink;
     button.setAttribute('class', 'save');
-    button.setAttribute('title', 'Copy Link: ' + audioLink);
+    button.setAttribute('title', 'Copy Link: ' + firstLink);
     button.onclick = function() {
       copyToClipboard(this);
     };
