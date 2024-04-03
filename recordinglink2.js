@@ -20,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function() {
 function copyToClipboard(btnElement) {
   var link = btnElement.closest("tr").querySelector(".download-audio.helpsy").href;
   if (link === null || link === ""){
-    console.log("link empty");
+    console.log("Link Empty");
+    alert("Link not available.\n Refresh and try again.");
   }
   else {
     navigator.clipboard.writeText(link).then(function() {
