@@ -2,10 +2,13 @@ document.addEventListener("DOMContentLoaded", function() {
   var table = document.getElementById("call-history-table");
 
   Array.from(table.rows).forEach(function(row) {
+    var audioLinkElement = row.querySelector(".download-audio.helpsy");
+    var audioLink = audioLinkElement ? audioLinkElement.href : 'No Link';
+    
     var button = document.createElement("a");
-    button.textContent = "Copy Link";
+    button.textContent = "Copy Link: " + audioLink;
     button.setAttribute('class', 'save');
-    button.setAttribute('title', 'Copy Link');
+    button.setAttribute('title', 'Copy Link: ' + audioLink);
     button.onclick = function() {
       copyToClipboard(this);
     };
