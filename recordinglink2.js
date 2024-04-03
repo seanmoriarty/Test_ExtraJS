@@ -19,10 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function copyToClipboard(btnElement) {
   var link = btnElement.closest("tr").querySelector(".download-audio.helpsy").href;
-
-  navigator.clipboard.writeText(link).then(function() {
-    console.log('Link copied to clipboard!');
-    alert("Copied Link: " + link);
+  
+  if (link !=""){
+    navigator.clipboard.writeText(link).then(function() {
+      console.log('Link copied to clipboard!');
+      alert("Copied Link: " + link);
+    }
 
   }).catch(function(error) {
     console.error('Error copying link: ', error);
